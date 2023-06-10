@@ -33,3 +33,38 @@
 // childFun();
 // const childFun2 = parentFunction();
 // childFun2();
+// -----------------------------------------------------------
+// // Example of a closure with IIFE syntax.
+// // IIFE (Immediately Invoked Function Expression)
+// // This privateCounter variable will be called into action (Invoked) immediately as it's being defined
+// const privateCounter = (() => {
+//   // count is a private variable that can be accessed only via the returned child anonymous arrow function. 
+//   let count = 0;
+//   // This console.log stmt will be called only once as the privateCounter constant will be holding the returned child anonymous arrow function.
+//   console.log(`initial value: ${count}`);
+//   // The returned child anonymous arrow function has a closure over the parent (privateCounter) scope and the golbal scope.
+//   return () => {
+//     count += 1;
+//     console.log(count);
+//   }
+// })();
+
+// privateCounter();
+// privateCounter();
+// privateCounter();
+
+// -----------------------------------------------------------
+const credits = ((num) => {
+  let credits = num;
+  console.log(`Initial credits value: ${credits}`);
+
+  return () => {
+    credits -= 1;
+    if (credits > 0) {console.log(`Playing game, ${credits} credits(s) remaining`);}
+    if (credits <= 0) {console.log('not enough credits!');}
+  }
+})(3);
+
+credits();
+credits();
+credits();
