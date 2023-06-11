@@ -72,3 +72,29 @@ rectangleArea = requireIntegers(rectangleArea);
 console.log(rectangleArea(20, 30));
 console.log(rectangleArea(20, 30, 40));
 console.log(rectangleArea(20, 30.26));
+
+
+// Example 3:
+// Decorating an async API call function:
+// Time data requests during development
+
+// Core Function
+let requestData = async (url) => {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+// Decorator Function
+const dataResponseTime = (fn) => {
+  return async (url) => {
+    console.time('fn');
+    const data = await fn(url);
+    console.timeEnd('fn');
+    return data;
+  }
+}
