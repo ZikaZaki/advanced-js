@@ -13,3 +13,10 @@ posts.forEach(post => {
 });
 
 console.clear();
+
+// filter()
+const filteredPosts = posts.filter(post => {
+  return post.userId === 5;
+});
+
+console.log(filteredPosts);
