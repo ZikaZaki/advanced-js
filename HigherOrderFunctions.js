@@ -20,3 +20,10 @@ const filteredPosts = posts.filter(post => {
 });
 
 console.log(filteredPosts);
+
+// map()
+const mappedPosts = filteredPosts.map(post => {
+  return post.id * 10;
+});
+
+console.log(mappedPosts);
