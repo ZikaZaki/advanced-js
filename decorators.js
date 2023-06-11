@@ -43,3 +43,13 @@ let rectangleArea = (length, width) => {
   return length * width;
 };
 
+// 1st Decorator Function
+const countParams = (fn) => {
+  return (...params) => {
+    if (params.length !== fn.length) {
+      throw new Error(`Incorrect number of parameters for ${fn.name}`);
+    }
+
+    return fn(...params);
+  }  
+}
