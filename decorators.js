@@ -59,7 +59,7 @@ const requireIntegers = (fn) => {
   return (...params) => {
     params.forEach(param => {
       if (!Number.isInteger(param)) {
-        throw new TypeError(`params for ${fn.names} must be integers`);
+        throw new TypeError(`Params for ${fn.name} must be integers`);
       }
     });
 
@@ -70,3 +70,5 @@ const requireIntegers = (fn) => {
 rectangleArea = countParams(rectangleArea);
 rectangleArea = requireIntegers(rectangleArea);
 console.log(rectangleArea(20, 30));
+// console.log(rectangleArea(20, 30, 40));
+console.log(rectangleArea(20, 30.26));
