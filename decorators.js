@@ -53,3 +53,20 @@ const countParams = (fn) => {
     return fn(...params);
   }  
 }
+
+// 2nd Decorator Function
+const requireIntegers = (fn) => {
+  return (...params) => {
+    params.forEach(param => {
+      if (!Number.isInteger(param)) {
+        throw new TypeError(`params for ${fn.names} must be integers`);
+      }
+    });
+
+    return fn(...params);
+  }
+}
+
+rectangleArea = countParams(rectangleArea);
+rectangleArea = requireIntegers(rectangleArea);
+console.log(rectangleArea(20, 30));
