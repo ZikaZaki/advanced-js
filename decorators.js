@@ -98,3 +98,13 @@ const dataResponseTime = (fn) => {
     return data;
   }
 }
+
+
+// Test Function
+const myTestFunction = async () => {
+  requestData = dataResponseTime(requestData);
+  const data = await requestData('https://jsonplaceholder.typicode.com/posts');
+  console.log(data);
+}
+
+myTestFunction();
