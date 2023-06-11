@@ -34,3 +34,12 @@ sum = callCounter(sum);
 console.log(sum(2, 3, 5));
 console.log(sum(1, 5));
 console.log(sum(14, 5));
+
+// Example 2:
+// Check for valid data and number of params
+
+// Core Function
+let rectangleArea = (length, width) => {
+  return length * width;
+};
+
