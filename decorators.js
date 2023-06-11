@@ -51,7 +51,7 @@ const countParams = (fn) => {
     }
 
     return fn(...params);
-  }  
+  }
 }
 
 // 2nd Decorator Function
@@ -70,5 +70,5 @@ const requireIntegers = (fn) => {
 rectangleArea = countParams(rectangleArea);
 rectangleArea = requireIntegers(rectangleArea);
 console.log(rectangleArea(20, 30));
-// console.log(rectangleArea(20, 30, 40));
+console.log(rectangleArea(20, 30, 40));
 console.log(rectangleArea(20, 30.26));
