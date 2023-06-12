@@ -36,3 +36,9 @@ console.log(curriedMultiply(2)(3));
 const timesTen = curriedMultiply(10);
 console.log(timesTen);
 console.log(timesTen(5));
+
+// Another Example:
+const updateElemText = id => content => document.querySelector(`#${id}`).textContent = content;
+// Applied Partially
+const updateHeaderText = updateElemText(`header`);
+// updateHeaderText('Hello ZikaZaki!');
