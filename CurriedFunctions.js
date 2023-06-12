@@ -22,3 +22,17 @@ const buildSammy = ingred1 => ingred2 => ingred3 => `${ingred1}, ${ingred2}, ${i
 
 const mySammy = buildSammy("Tomato")("Turkey")("Bread");
 console.log(mySammy);
+
+// Another Example of a curried function
+const multiply = (x, y) => x * y;
+
+const curriedMultiply = x => y => x * y;
+
+console.log(multiply(2, 3));
+console.log(curriedMultiply(2));
+console.log(curriedMultiply(2)(3));
+
+// Partially applied functions are a common use of currying
+const timesTen = curriedMultiply(10);
+console.log(timesTen);
+console.log(timesTen(5));
