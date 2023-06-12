@@ -72,3 +72,22 @@ completeOrder("1000");
 //     }
 //   }
 // }
+
+// Advnced example
+// Requires a function with a fixed number of parameters
+const curry = (fn) => {
+  console.log("outside curried fn.length: ", fn.length);
+  return curried = (...args) => {
+    console.log("inside curried fn.length: ", fn.length);
+    console.log("inside curried args.length: ", args.length);
+    if (fn.length !== args.length) {
+      // bind creates new function
+      return curried.bind(null, ...args); 
+    }
+    return fn(...args);
+  };
+}
+
+const total = (x, y, z) => x + y + z;
+const curriedTotal = curry(total);
+console.log(curriedTotal(10)(20)(30));
