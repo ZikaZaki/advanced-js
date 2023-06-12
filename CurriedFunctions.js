@@ -14,3 +14,11 @@ const buildSandwitch = (ingredient1) => {
 
 const mySandwitch = buildSandwitch("Bacon")("Lettuce")("Tomato");
 console.log(mySandwitch);
+
+// It works but that's getting ugly and nested the further we go
+
+// Let's refactor:
+const buildSammy = ingred1 => ingred2 => ingred3 => `${ingred1}, ${ingred2}, ${ingred3}`;
+
+const mySammy = buildSammy("Tomato")("Turkey")("Bread");
+console.log(mySammy);
