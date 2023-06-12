@@ -42,3 +42,33 @@ const updateElemText = id => content => document.querySelector(`#${id}`).textCon
 // Applied Partially
 const updateHeaderText = updateElemText(`header`);
 // updateHeaderText('Hello ZikaZaki!');
+
+// Another common use of currying is function composition
+// Allows calling small functions in a specific order
+const addCustomer = fn => (...args) => {
+  console.log('Saving customer info...');
+  return fn(...args);
+}
+
+const processOrder = fn => (...args) => {
+  console.log(`processing order #${args[0]}`);
+  return fn(...args);
+}
+
+let completeOrder = (...args) => {
+  console.log(`Order #${[...args].toString()} completed.`);
+}
+
+completeOrder = (processOrder(completeOrder));
+console.log(completeOrder);
+completeOrder = (addCustomer(completeOrder));
+completeOrder("1000");
+
+// If these functions were written in a more standard way, this is what you would see. And this is what meant by "climbing the stair case" out of each function. When applied above we had to start from the inside and work our way out to the top.
+// function addCustomer(...args) {
+//   return function processOrder(...args) {
+//     return function completeOrder(...args) {
+//       // end
+//     }
+//   }
+// }
