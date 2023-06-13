@@ -12,3 +12,9 @@
   5) BigInt
   6) Symbol
 */
+
+
+/* Structural:
+  1) Object: (new) Object, Array, Map, Set, weakMap, Date
+  2) function
+*/
