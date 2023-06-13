@@ -166,3 +166,20 @@ console.log(pureScoreHistory);
 console.log(scoreArray);
 console.log(pureScoreHistory === scoreArray);
 
+// Review:
+// Primitive vs Structural Data Types
+// Primitive data types pass values
+// Structurla data types pass references
+// Primitive data types are immutable - can't change elements like first char in a string.
+// Structural data types contain mutable data - can change elements inside an array or an object.
+// Reassignment is not the same as being mutalbe or immutable
+
+// Shallow Copy vs. Deep Copy (clones of data structures)
+/* Shallow copies still share references of nested structures
+ * which allows for mutation of the original data.
+ * Note: Object.freeze() creates a shallow freeze.
+*/
+
+/* Deep copies share NO references.
+ * Note: knowing how to build deepClone functions and using libraries like lodash that allow you to make deep copies are important to know when constructing Pure Functions because they require you to avoid mutating the original data
+*/
