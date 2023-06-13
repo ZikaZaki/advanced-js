@@ -26,3 +26,6 @@ let y = x;
 y += 1;
 console.log(y);
 console.log(x);
+
+// Structural types use references:
+let xArray = [1, 2, 3];
