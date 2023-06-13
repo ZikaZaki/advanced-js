@@ -152,3 +152,17 @@ console.log(newScoreArray === scoreArray);
 const myScoreObj = deepClone(scoreObj);
 console.log(myScoreObj);
 console.log(myScoreObj === scoreObj);
+
+// Now we can make a pure function
+const pureAddToScoreHistory = (array, score, cloneFunc) => {
+  const newArray = cloneFunc(array);
+  newArray.push(score);
+  
+  return newArray;
+}
+
+const pureScoreHistory = pureAddToScoreHistory(scoreArray, 18, deepClone);
+console.log(pureScoreHistory);
+console.log(scoreArray);
+console.log(pureScoreHistory === scoreArray);
+
