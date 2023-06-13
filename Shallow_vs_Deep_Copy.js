@@ -18,3 +18,7 @@
   1) Object: (new) Object, Array, Map, Set, weakMap, Date
   2) function
 */
+
+// Value vs Reference
+// Primitives pass values:
+let x = 2;
