@@ -25,3 +25,4 @@ let x = 2;
 let y = x;
 y += 1;
 console.log(y);
+console.log(x);
