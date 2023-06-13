@@ -51,3 +51,23 @@ yArray[0] = 9;
 console.log(yArray);
 console.log(xArray);
 // still shares the same reference
+
+// Pure Functions require you to avoid
+// mutating the data
+
+// Inpure function that mutates the data
+const addToScoreHistory = (array, score) => {
+  array.push(score);
+  return array;
+}
+
+const scoreArray = [44, 23, 32, 12];
+console.log(addToScoreHistory(scoreArray, 14));
+// This mutates the original array.
+// This is considered to be a side-effect.
+
+// Notice: "const" does not make the array immutable
+
+// we need to modify our function so it does not
+// mutate the original data.
+
