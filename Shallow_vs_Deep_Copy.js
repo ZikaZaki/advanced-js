@@ -71,3 +71,52 @@ console.log(addToScoreHistory(scoreArray, 14));
 // we need to modify our function so it does not
 // mutate the original data.
 
+// Sahllow copy vs. Deep copy (clones)
+
+// Sahllow Copy
+// 1) with spread operator
+const zArray = [...yArray, 10];
+console.log(zArray);
+console.log(yArray);
+console.log(xArray === yArray);
+console.log(yArray === zArray);
+
+// 2) with Object.assign()
+const tArray = Object.assign([], zArray);
+tArray.push(11);
+console.log(tArray);
+console.log(zArray);
+console.log(tArray === zArray);
+
+// But if there are nested arrays or objects...
+yArray.push([8, 9, 10]);
+const vArray = [...yArray];
+console.log(vArray);
+console.log(vArray === yArray);
+vArray[4].push(5);
+console.log(vArray);
+console.log(yArray);
+vArray.push(11);
+console.log(vArray);
+console.log(yArray);
+// nested strctural data types still share a reference!
+// Problem: Shallow Copy does not go levels deep when it comes to nested structural data types. Therefore, the nested structural data stypes, still share the same reference, although the rest are not.
+// Note: Array.from() and slice() create shallow copies, too.
+
+// When it comes to objects, what about...
+// ...Object.freeze() ??
+const scoreObj = {
+  "first": 44,
+  "second": 12,
+  "third": { "a": 1, "b": 2 }
+}
+
+// Even though, we froze the scoreObj, we still are able to change the values of "nested objects". That because Object.freeze() - is a shallow freeze.
+Object.freeze(scoreObj);
+scoreObj.third.a = 8;
+console.log(scoreObj);
+
+// To avoid these mutations
+// Deep Copy is needed to avoid this issue.
+// Several libraries like lodash, Ramda and others
+// have this feature built-in
