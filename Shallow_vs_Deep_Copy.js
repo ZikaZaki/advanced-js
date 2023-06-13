@@ -34,3 +34,20 @@ yArray.push(4);
 console.log(yArray);
 console.log(xArray);
 
+
+// Mutable vs Immutable
+
+// Primitives are immutable
+let myName = "Dave";
+// myName[0] = "W"; // nope!
+console.log(myName);
+
+// Reassignment is not the same as being mutable or immutable
+myName = "David";
+console.log(myName);
+
+// Structures contain mutable data
+yArray[0] = 9;
+console.log(yArray);
+console.log(xArray);
+// still shares the same reference
