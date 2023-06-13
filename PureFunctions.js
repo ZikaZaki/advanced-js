@@ -10,4 +10,7 @@
   5) Could be added to your utility functions.
 */
 
-
+/* Rules for Pure Functions:
+  1) The same input ALWAYS gives the same output
+  2) No side effects
+*/
