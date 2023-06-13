@@ -120,3 +120,35 @@ console.log(scoreObj);
 // Deep Copy is needed to avoid this issue.
 // Several libraries like lodash, Ramda and others
 // have this feature built-in
+
+/* Here is a one line Vanilla JS solution,
+but it does not work with Dates, functions, undefined,
+Infinity, RegExps, Maps, Sets, Blobs, FileLists, ImageDatas, and other complex data types.
+*/
+const newScoreObj = JSON.parse(JSON.stringify(scoreObj));
+console.log(newScoreObj);
+console.log(scoreObj === newScoreObj);
+
+// Instead of using a library, here is a Vanilla JS function
+const deepClone = (obj) => {
+  if (typeof obj !== "object" || obj === null) return obj;
+
+  // Create an array or object to hold the values
+  const newObject = Array.isArray(obj) ? [] : {};
+
+  for (let key in obj) {
+    const value = obj[key];
+    // recursive call for nested objects & arrays
+    newObject[key] = deepClone(value);
+  }
+
+  return newObject;
+}
+
+const newScoreArray = deepClone(scoreArray);
+console.log(newScoreArray);
+console.log(newScoreArray === scoreArray);
+
+const myScoreObj = deepClone(scoreObj);
+console.log(myScoreObj);
+console.log(myScoreObj === scoreObj);
