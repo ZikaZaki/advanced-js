@@ -78,3 +78,6 @@ console.log(myArray);
 const oneToFive = [1, 2, 3, 4, 5];
 const oddToFive = oneToFive.filter(elem => elem % 2 !== 0);
 console.log(oddToFive);
+
+const doubled = oneToFive.map(elem => elem * 2);
+console.log(doubled);
