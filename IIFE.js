@@ -36,3 +36,15 @@
        console.log(x);
        console.log(helloWorld());
    })();
+
+// Reason (2) Private Variables and Methods from Closure
+const increment = (() => {
+  let counter = 0;
+  console.log(counter);
+  const credits = (num) => console.log(`You have ${num} credits(s).`);
+  return () => { counter++; credits(counter); }
+})();
+increment();
+increment();
+increment();
+// credits(3); // ref error (Not in the global scope)
