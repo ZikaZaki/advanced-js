@@ -66,3 +66,21 @@ Score.increment();
 console.log(Score.current());
 Score.reset();
 console.log(Score.current());
+
+// The Revealing Pattern is a variation of the Module Pattern
+const Game = (() => {
+  let count = 0;
+  const current = () => { return `Game score is ${count}.`};
+  const increment = () => { count++ };
+  const reset = () => { count = 0 };
+
+// It's called the "Revealing Pattern" and that because we're returning pointers to the methods and not the methods.
+  return {
+    current: current,
+    increment: increment,
+    reset: reset
+  }
+})();
+
+Game.increment();
+console.log(Game.current());
