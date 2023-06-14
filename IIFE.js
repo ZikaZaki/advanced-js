@@ -48,3 +48,21 @@ increment();
 increment();
 increment();
 // credits(3); // ref error (Not in the global scope)
+
+// Reason (3) The Module Pattern
+const Score = (() => {
+  let count = 0;
+
+  return {
+    current: () => { return count },
+    increment: () => { count++ },
+    reset: () => { count = 0 }
+  }
+})();
+
+Score.increment();
+console.log(Score.current());
+Score.increment();
+console.log(Score.current());
+Score.reset();
+console.log(Score.current());
