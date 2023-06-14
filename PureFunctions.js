@@ -21,3 +21,32 @@ console.log(add(2, 3));
 
 const fullName = (first, last) => `${first} ${last}`;
 console.log(fullName("Zack", "Ali"));
+
+// We can replace the function with the output
+// This is called "referentail transparency"
+
+/* Rule (1.a) A pure function should have at least one parameter.
+Otherwise, it is the same as a constant because they can only work with their input.
+*/
+const firstName = () => "Dave";
+// const firstName = "Dave";
+
+/* 2) No side effects:
+This also means accessing the scope outside the function makes the function impure
+*/
+const z = 5;
+const sum = (x, y) => x + y + z;
+
+/* Pure function cannot:
+- Access a database, API, file system, storage, etc.
+- Modify the DOM or even log to the console.
+Thant said, clearly "impure" functions are necessary but they are harder to test and debug.
+----------------------------------------------------------------
+Further, no input state can be modified. That is, no data should be "mutated". Consider all input data to be immutable.
+*/
+
+// Impure Example 1:
+let x = 1;
+const increment = () => x += 1;
+console.log(increment());
+console.log(x);
