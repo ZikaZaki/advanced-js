@@ -57,6 +57,7 @@ const addToArray = (array, data) => {
   array.push(data);
   return array;
 }
+
 console.log(addToArray(myArray, 4));
 console.log(myArray);
 
@@ -69,3 +70,11 @@ console.log(x);
 const pureAddToArray = (array, data) => [...array, data];
 console.log(pureAddToArray(myArray, 5));
 console.log(myArray);
+
+/* Note: Notice how pure functions ALWAYS return something. No return means you definitely do not have a pure function.
+*/
+
+// NOTE: Some common Higer Order Functions (HOF) are Pure Functions.
+const oneToFive = [1, 2, 3, 4, 5];
+const oddToFive = oneToFive.filter(elem => elem % 2 !== 0);
+console.log(oddToFive);
