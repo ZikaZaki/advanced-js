@@ -84,3 +84,11 @@ const Game = (() => {
 
 Game.increment();
 console.log(Game.current());
+
+// Final Variation: Injecting a namespace object
+((namespace) => {
+  namespace.count = 0;
+  namespace.current = function () { return `App count is ${this.count}.`};
+  namespace.increment = function () { this.count++ };
+  namespace.reset = function () { this.count = 0 };
+})(window.App = window.App || {});
