@@ -50,3 +50,13 @@ let x = 1;
 const increment = () => x += 1;
 console.log(increment());
 console.log(x);
+
+// Impure Example 2:
+const myArray = [1, 2, 3];
+const addToArray = (array, data) => {
+  array.push(data);
+  return array;
+}
+console.log(addToArray(myArray, 4));
+console.log(myArray);
+
