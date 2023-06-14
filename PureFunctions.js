@@ -60,3 +60,7 @@ const addToArray = (array, data) => {
 console.log(addToArray(myArray, 4));
 console.log(myArray);
 
+// Refactored Example 1:
+const pureIncrement = (num) => num += 1;
+console.log(pureIncrement(x));
+console.log(x);
