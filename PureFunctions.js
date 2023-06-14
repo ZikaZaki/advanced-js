@@ -81,3 +81,6 @@ console.log(oddToFive);
 
 const doubled = oneToFive.map(elem => elem * 2);
 console.log(doubled);
+
+const summed = oneToFive.reduce((acc, elem) => acc + elem);
+console.log(summed);
