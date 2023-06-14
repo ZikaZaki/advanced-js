@@ -57,7 +57,6 @@ const addToArray = (array, data) => {
   array.push(data);
   return array;
 }
-
 console.log(addToArray(myArray, 4));
 console.log(myArray);
 
@@ -84,3 +83,11 @@ console.log(doubled);
 
 const summed = oneToFive.reduce((acc, elem) => acc + elem);
 console.log(summed);
+
+console.log(oneToFive);
+
+// Review of The Rules for Pure Functions:
+// 1) The same input ALWAYS gives the same output.
+// 2) No side effects (no mutations!)
+
+// The goal: write small, pure functions when you can for code that is clean, easy to test, and easy to debug.
