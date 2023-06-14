@@ -14,3 +14,10 @@
   1) The same input ALWAYS gives the same output
   2) No side effects
 */
+
+// The same input ALWAYS gives the same output
+const add = (x, y) => x + y;
+console.log(add(2, 3));
+
+const fullName = (first, last) => `${first} ${last}`;
+console.log(fullName("Zack", "Ali"));
