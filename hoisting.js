@@ -1,5 +1,6 @@
 // JavaScript Hoisting
 const initApp = () => {
+  console.log(stepOne);
   stepOne();
 }
 
