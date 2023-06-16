@@ -5,6 +5,6 @@ var x = 5;
 
 stepOne();
 
-function stepOne() {
+const stepOne = () => {
   console.log("step one");
 }
