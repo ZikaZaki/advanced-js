@@ -1,4 +1,8 @@
-// JavaScript Hoisting
+/* JavaScript Hoisting:
+JavaScript Hoisting refers to the process whereby the interpreter appears to move the declaration of functions, 
+variables or classes to the top of their scope, prior to execution of the code. Hoisting is not a term normatively 
+defined in the ECMAScript specification.
+*/
 const initApp = () => {
   console.log(stepOne);
   stepOne();
