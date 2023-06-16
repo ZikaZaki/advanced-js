@@ -3,7 +3,7 @@ const initApp = () => {
   stepOne();
 }
 
-initApp();
+document.addEventListener("DOMContentLoaded", initApp);
 
 const stepOne = () => {
   console.log("step one");
