@@ -1,7 +1,9 @@
 // JavaScript Hoisting
-console.log(x);
+const initApp = () => {
+  stepOne();
+}
 
-var x = 5;
+initApp();
 
 const stepOne = () => {
   console.log("step one");
