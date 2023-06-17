@@ -53,3 +53,9 @@ const bake = () => {
     bake: () => console.log("Baking...")
   }
 }
+
+const toss = () => {
+  return {
+    toss: () => console.log("Tossing...")
+  }
+}
