@@ -39,3 +39,11 @@ class StuffedButteredCrustPizza extends Pizza {
 const myPizza = new StuffedButteredCrustPizza();
 myPizza.stuff();
 myPizza.butter();
+
+/* ============================================================================================================================================ */
+// To solve the problem of the D.R.Y. in the inheritance. Instead, we need to use Composition for methods.
+const prepare = () => {
+  return {
+    prepare: () => console.log("Preparing...")
+  }
+}
