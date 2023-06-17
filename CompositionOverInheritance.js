@@ -25,3 +25,7 @@ class Salad {
 class StuffedCrustPizza extends Pizza {
   stuff() { console.log("Stuffing the crust..."); }
 }
+
+class ButteredCrustPizza extends Pizza {
+  butter() { console.log("Buttering the crust..."); }
+}
