@@ -30,6 +30,7 @@ class ButteredCrustPizza extends Pizza {
   butter() { console.log("Buttering the crust..."); }
 }
 
+// Problem: Repeating methods - Not D.R.Y.
 class StuffedButteredCrustPizza extends Pizza {
   stuff() { console.log("Stuffing the crust..."); }
   butter() { console.log("Buttering the crust..."); }
