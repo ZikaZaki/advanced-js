@@ -47,3 +47,9 @@ const prepare = () => {
     prepare: () => console.log("Preparing...")
   }
 }
+
+const bake = () => {
+  return {
+    bake: () => console.log("Baking...")
+  }
+}
