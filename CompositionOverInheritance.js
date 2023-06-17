@@ -71,3 +71,9 @@ const stuff = () => {
     stuff: () => console.log("Stuffing the crust...")
   }
 }
+
+const butter = () => {
+  return {
+    butter: () => console.log("Buttering the crust...")
+  }
+}
