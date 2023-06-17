@@ -65,3 +65,9 @@ const ready = () => {
     ready: () => console.log("Ready!")
   }
 }
+
+const stuff = () => {
+  return {
+    stuff: () => console.log("Stuffing the crust...")
+  }
+}
