@@ -21,3 +21,7 @@ class Salad {
   toss() { console.log("Tossing..."); }
   ready() { console.log("Ready!"); }
 }
+
+class StuffedCrustPizza extends Pizza {
+  stuff() { console.log("Stuffing the crust..."); }
+}
