@@ -59,3 +59,9 @@ const toss = () => {
     toss: () => console.log("Tossing...")
   }
 }
+
+const ready = () => {
+  return {
+    ready: () => console.log("Ready!")
+  }
+}
