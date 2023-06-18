@@ -154,3 +154,12 @@ let addToppings = (pizza, toppings) => {
   pizza.toppings = [...pizza.toppings, ...toppings];
   return pizza;
 }
+
+// Decorate the addToppings function with shallowPizzaClone
+addToppings = shallowPizzaClone(addToppings);
+
+const timsPizza = createPizza("medium", "thin", "original");
+const timsPizzaWithToppings = addToppings(timsPizza, ["olives", "cheese", "pepperoni"]);
+console.log(timsPizzaWithToppings);
+console.log(timsPizza);
+console.log(timsPizza === timsPizzaWithToppings);
