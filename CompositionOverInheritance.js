@@ -131,3 +131,17 @@ const addTopping = (pizza, topping) => {
   pizza.toppings.push(topping);
   return pizza;
 }
+
+const jamesPizza = createPizza("medium", "thin", "original");
+console.log(jamesPizza);
+console.log(addTopping(jamesPizza, "pepperoni"));
+console.log(jamesPizza); // mutation!
+
+// we need to clone the pizza object to avoid mutation
+// Function composition: Imperative Style
+// const shallowPizzaClone = (fn) => {
+//   return (obj, array) => {
+//     const newObj = { ...obj };
+//     return fn(newObj, array);
+//   }
+// }
