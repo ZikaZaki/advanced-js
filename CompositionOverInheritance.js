@@ -112,3 +112,16 @@ const createStuffedButteredCrustPizza = (pizza) => {
     ...butter()
   }
 }
+
+const anotherPizza = createPizza("medium", "thin", "original");
+const somebodysPizza = createStuffedButteredCrustPizza(anotherPizza);
+// OR
+const davesPizza = createStuffedButteredCrustPizza(createPizza("medium", "thin", "original"));
+
+const davesSalad = createSalad("side", "ranch");
+
+davesPizza.bake();
+davesPizza.stuff();
+davesSalad.prepare();
+console.log(davesPizza);
+console.log(davesSalad);
