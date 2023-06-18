@@ -148,3 +148,9 @@ console.log(jamesPizza); // mutation!
 
 // shorter way to write shallowPizzaClone: Declartive Style
 const shallowPizzaClone = (fn) => (obj, array) => fn({ ...obj }, array);
+
+// decorating addToppings with shallowPizzaClone
+let addToppings = (pizza, toppings) => {
+  pizza.toppings = [...pizza.toppings, ...toppings];
+  return pizza;
+}
