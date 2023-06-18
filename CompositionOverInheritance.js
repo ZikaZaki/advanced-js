@@ -125,3 +125,9 @@ davesPizza.stuff();
 davesSalad.prepare();
 console.log(davesPizza);
 console.log(davesSalad);
+
+// What about toppings?
+const addTopping = (pizza, topping) => {
+  pizza.toppings.push(topping);
+  return pizza;
+}
