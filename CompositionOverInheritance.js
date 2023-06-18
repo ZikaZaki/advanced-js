@@ -103,3 +103,12 @@ const createSalad = (size, dressing) => {
     ...ready()
   }
 }
+
+// Compare to ES6 class syntax with extends and super()
+const createStuffedButteredCrustPizza = (pizza) => {
+  return {
+    ...pizza,
+    ...stuff(),
+    ...butter()
+  }
+}
