@@ -93,3 +93,13 @@ const createPizza = (size, crust, sauce) => {
     ...ready()
   }
 }
+
+const createSalad = (size, dressing) => {
+  return {
+    size: size,
+    dressing: dressing,
+    ...prepare(),
+    ...toss(),
+    ...ready()
+  }
+}
