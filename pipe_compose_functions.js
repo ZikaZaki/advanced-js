@@ -87,3 +87,34 @@ const wordCount = pipe(
   count
 );
 console.log("Word Count: ", wordCount(lorem));
+
+// The pipe function is reusable
+const egbdf = "Every good boy does fine.";
+console.log("Word Count: ", wordCount(egbdf));
+
+// Combine Processes: Check for palindrome
+const pal1 = "taco cat";
+const pal2 = "UFO tofu";
+const pal3 = "ZikaZaki";
+
+const split = (string) => string.split('');
+const join = (string) => string.join('');
+const lower = (string) => string.toLowerCase();
+const reverse = (array) => array.reverse();
+
+const fwd = pipe(
+  splitOnSpace,
+  join,
+  lower
+);
+
+const rev = pipe(
+  fwd, // a nested pipe function
+  split,
+  reverse,
+  join
+);
+
+console.log(fwd(pal1) === rev(pal1));
+console.log(fwd(pal2) === rev(pal2));
+console.log(fwd(pal3) === rev(pal3));
