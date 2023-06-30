@@ -62,7 +62,6 @@ const pipeResult4 = pipe(
 )(5);
 console.log("Pipe Result: ", pipeResult4);
 
-
 // Or you could curry the divideBy function for a custom unary function:
 const divBy = (divisor) => (num) => num / divisor;
 const divideBy2 = divBy(2); // Partially applied
@@ -74,7 +73,6 @@ const pipeResult5 = pipe(
   divideBy2
 )(5);
 console.log("Pipe Result: ", pipeResult5);
-
 
 // Let's look at some examples beyond math functions
 const lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
@@ -119,7 +117,6 @@ console.log(fwd(pal1) === rev(pal1));
 console.log(fwd(pal2) === rev(pal2));
 console.log(fwd(pal3) === rev(pal3));
 
-
 // Clone / Copy functions within a pipe or compose function
 
 // 3 approaches:
@@ -148,7 +145,6 @@ console.log(homeScore(scoreObj) === scoreObj);
 // Positive: Fewer function calls
 // Negative: Create impure functions and testing difficulties, and possibly debugging difficulities.
 
-
 // 2) Curry the function to create a partial that is unary
 let incrementHomeB = (cloneFn) => (obj) => {
   const newObj = cloneFn(obj);
@@ -170,7 +166,6 @@ console.log(scoreObj);
 
 // Positive: Pure function with clear dependencies
 // Negative: More calls to the cloning function
-
 
 // 3) Insert the clone function as a dependency
 const incrementHomeC = (obj, cloneFn) => {
