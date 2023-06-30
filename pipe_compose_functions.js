@@ -61,3 +61,17 @@ const pipeResult4 = pipe(
   x => divideBy(2, x)
 )(5);
 console.log("Pipe Result: ", pipeResult4);
+
+
+// Or you could curry the divideBy function for a custom unary function:
+const divBy = (divisor) => (num) => num / divisor;
+const divideBy2 = divBy(2); // Partially applied
+
+const pipeResult5 = pipe(
+  add2,
+  subtract1,
+  multiplyBy5,
+  divideBy2
+)(5);
+console.log("Pipe Result: ", pipeResult5);
+
