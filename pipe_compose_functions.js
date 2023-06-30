@@ -28,3 +28,14 @@ const compose = (...fns) => val => fns.reduceRight((prev, fn) => fn(prev), val);
 
 const compResult = compose(multiplyBy5, subtract1, add2)(4);
 console.log("Compose Result: ", compResult);
+
+/*
+* To do the same, but read from left to right... we use "pipe". It is the same except uses reduce instead of reduceRight.
+*/
+const pipe = (...fns) => (val) => fns.reduce((prev, fn) => fn(prev), val);
+const pipeResult = pipe(multiplyBy5, subtract1, add2)(4);
+console.log("Pipe Result: ", pipeResult);
+
+const pipeResult2 = pipe(add2, subtract1, multiplyBy5)(5);
+console.log("Pipe Result: ", pipeResult2);
+
