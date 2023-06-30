@@ -39,3 +39,10 @@ console.log("Pipe Result: ", pipeResult);
 const pipeResult2 = pipe(add2, subtract1, multiplyBy5)(5);
 console.log("Pipe Result: ", pipeResult2);
 
+// You will often see the functions on separate lines
+const pipeResult3 = pipe(
+  add2,
+  subtract1,
+  multiplyBy5
+)(6);
+console.log("Pipe Result: ", pipeResult3)
