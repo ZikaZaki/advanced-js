@@ -147,3 +147,26 @@ console.log(homeScore(scoreObj) === scoreObj);
 
 // Positive: Fewer function calls
 // Negative: Create impure functions and testing difficulties, and possibly debugging difficulities.
+
+
+// 2) Curry the function to create a partial that is unary
+let incrementHomeB = (cloneFn) => (obj) => {
+  const newObj = cloneFn(obj);
+  newObj.home += 1; // mutation
+  return newObj;
+}
+
+// Creates the partial by applying the first argument in advance
+incrementHomeB = incrementHomeB(shallowClone);
+
+const homeScoreB = pipe(
+  incrementHomeB
+  // another function,
+  // and another function, etc
+);
+
+console.log(homeScoreB(scoreObj));
+console.log(scoreObj);
+
+// Positive: Pure function with clear dependencies
+// Negative: More calls to the cloning function
