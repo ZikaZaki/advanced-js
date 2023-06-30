@@ -170,3 +170,22 @@ console.log(scoreObj);
 
 // Positive: Pure function with clear dependencies
 // Negative: More calls to the cloning function
+
+
+// 3) Insert the clone function as a dependency
+const incrementHomeC = (obj, cloneFn) => {
+  const newObj = cloneFn(obj);
+  newObj.home += 1; // mutation
+  return newObj;
+};
+
+const homeScoreC = pipe(
+  x => incrementHomeC(x, shallowClone)
+  // another function,
+  // and another function, etc
+);
+console.log(homeScoreC(scoreObj));
+console.log(scoreObj);
+
+// Positive: Pure function with clear dependencies
+// Negative: Non-unary functions in your pipe / compose chain
