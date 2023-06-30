@@ -46,3 +46,18 @@ const pipeResult3 = pipe(
   multiplyBy5
 )(6);
 console.log("Pipe Result: ", pipeResult3)
+
+/*
+* This is a "pointer free" style where you do not see the unary parameter passed between each function.
+*/
+
+// Example with a 2nd parameter
+const divideBy = (divisor, num) => num / divisor;
+
+const pipeResult4 = pipe(
+  add2,
+  subtract1,
+  multiplyBy5,
+  x => divideBy(2, x)
+)(5);
+console.log("Pipe Result: ", pipeResult4);
