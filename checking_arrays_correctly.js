@@ -28,3 +28,14 @@ myArray = [{ "id": 1 }];
 
 console.log(myArray?.[0]?.id ? true : false);
 console.log(myArray?.[0]?.name ? true : false);
+
+// You can use it with the null coalescing operator, too.
+console.log(myArray?.[0]?.id ?? "No id property");
+console.log(myArray?.[0]?.name ?? "No name property");
+console.log(myArray ?? "Empty array");
+
+// If need to find out if it is an array
+myArray = "Dave";
+
+// This does not work. It'll return true cause string has a length property.
+console.log(myArray && myArray.length ? true : false);
