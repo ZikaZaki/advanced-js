@@ -1,7 +1,7 @@
 const extension = '/';
-  // Switch statement
 let contentType;
 
+// Switch statement
 switch(extension) {
   case '.css':
     contentType = 'text/css';
