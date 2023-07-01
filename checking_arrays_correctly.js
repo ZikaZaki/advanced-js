@@ -1,4 +1,3 @@
-
 // Checking for Empty Arrays
 let myArray = [];
 
@@ -39,7 +38,6 @@ myArray = "Dave";
 
 // This does not work. It'll return true cause string has a length property.
 console.log(myArray && myArray.length ? true : false);
-
 
 // Neither does this work
 console.log(myArray?.length ? true : false);
