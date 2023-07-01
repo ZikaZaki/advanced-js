@@ -1,4 +1,3 @@
-
 const initApp = () => {
   const button = document.querySelector('button');
 //   button.addEventListener('click', debounce(clickLog, 2000));
