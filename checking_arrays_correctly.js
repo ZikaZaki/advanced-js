@@ -12,3 +12,13 @@ console.log(myArray.length ? true : false);
 myArray = undefined; // same if null
 // Error:
 // console.log(myArray.length ? true : false);
+
+// So we have learned to do this:
+console.log(myArray && myArray.length ? true : false);
+
+// We now have a more concise way!
+myArray = [];
+
+// Optional Chaining
+console.log(myArray?.length ? true : false);
+// ?. is the optaional chaining operator
