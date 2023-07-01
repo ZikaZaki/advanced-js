@@ -39,3 +39,14 @@ myArray = "Dave";
 
 // This does not work. It'll return true cause string has a length property.
 console.log(myArray && myArray.length ? true : false);
+
+
+// Neither does this work
+console.log(myArray?.length ? true : false);
+
+// This is the way to be sure!
+console.log(Array.isArray(myArray));
+
+// So if you are completely unsure...
+myArray = [{ "id": 1 }];
+console.log(Array.isArray(myArray) && myArray.length ? true : false);
