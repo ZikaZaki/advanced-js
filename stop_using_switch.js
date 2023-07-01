@@ -24,7 +24,6 @@ switch(extension) {
     contentType = 'text/html';
 }
 
-
 // Switch statement can be replaced with object
 const extensionObj = {
   '.css': 'text/css',
@@ -36,7 +35,6 @@ const extensionObj = {
 }
 
 console.log(extensionObj[extension] || 'text/html');
-
 
 // you can also replace switch statement with Maps
 const myMap = new Map();
