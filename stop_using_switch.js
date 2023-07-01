@@ -36,3 +36,15 @@ const extensionObj = {
 }
 
 console.log(extensionObj[extension] || 'text/html');
+
+
+// you can also replace switch statement with Maps
+const myMap = new Map();
+myMap.set('.css', 'text/css');
+myMap.set('.js', 'text/javascript');
+myMap.set('.json', 'application/json');
+myMap.set('.jpg', 'image/jpeg');
+myMap.set('.png', 'image/png');
+myMap.set('.txt', 'text/plain');
+
+console.log(myMap.get(extension) || 'text/html');
