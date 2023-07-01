@@ -50,3 +50,7 @@ console.log(Array.isArray(myArray));
 // So if you are completely unsure...
 myArray = [{ "id": 1 }];
 console.log(Array.isArray(myArray) && myArray.length ? true : false);
+
+// or to check for a propery also...
+console.log(Array.isArray(myArray) && myArray[0]?.id ? true : false);
+console.log(Array.isArray(myArray) && myArray[0]?.name ? true : false);
