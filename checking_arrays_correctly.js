@@ -22,3 +22,9 @@ myArray = [];
 // Optional Chaining
 console.log(myArray?.length ? true : false);
 // ?. is the optaional chaining operator
+
+// You can use more than one!
+myArray = [{ "id": 1 }];
+
+console.log(myArray?.[0]?.id ? true : false);
+console.log(myArray?.[0]?.name ? true : false);
