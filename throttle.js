@@ -1,4 +1,3 @@
-
 const initApp = () => {
   const tbutton = document.querySelector('#throttle');
   
@@ -8,7 +7,6 @@ const initApp = () => {
 }
 
 const clickLog = () => console.log('clicked');
-
 const scrollLog = () => console.log('scrolling'); 
 
 document.addEventListener('DOMContentLoaded', initApp);
