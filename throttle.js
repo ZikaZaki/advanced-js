@@ -7,4 +7,5 @@ const initApp = () => {
   window.addEventListener('scroll', throttle(scrollLog, 500));
 }
 
+const clickLog = () => console.log('clicked');
 
