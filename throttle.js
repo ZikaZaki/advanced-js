@@ -1,1 +1,10 @@
 
+const initApp = () => {
+  const tbutton = document.querySelector('#throttle');
+  
+  tbutton.addEventListener('click', throttle(clickLog, 2000));
+  
+  window.addEventListener('scroll', throttle(scrollLog, 500));
+}
+
+
