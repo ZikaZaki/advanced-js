@@ -31,6 +31,7 @@ const getPostsSerialized = async (ids) => {
   console.log("I'll wait on you");
 }
 
+// Using Promise.all is faster, even though you may not get the data in order.
 const getPostsConcurrently = async (ids) => {
   const posts = await Promise.all(ids.map(async (id) => getPost(id)));
   console.log(posts);
