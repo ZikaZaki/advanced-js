@@ -32,6 +32,7 @@ const getPostsSerialized = async (ids) => {
 }
 
 // Get posts with Higher Order Function (reduce cause it returns a value).
+// Once you wrap your head around how this works, this might actually be your preferred way of getting Serialized Result.
 const getPostsWithReduce = async (ids) => {
   await ids.reduce(async (acc, id) => {
     // Waits for the previous item to complete (Resolve). Not awaiting the acc, will return the data in random order.
