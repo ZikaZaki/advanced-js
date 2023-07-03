@@ -34,6 +34,7 @@ const getPostsSerialized = async (ids) => {
 // When using Promise.all, if one of the promises falis they all fail. 
 // So if you want to check the status allowing some to fail and some not and still get something back, use Promise.allSettled
 const getPostsConcurrently = async (ids) => {
+  // Promise.allSettled => returns all promises except the ones that failed.
   const posts = await Promise.all(ids.map(async (id) => getPost(id)));
   console.log(posts);
   console.log("I'll wait on you");
