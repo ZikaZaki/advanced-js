@@ -7,3 +7,8 @@ const initApp = async () => {
 }
 
 document.addEventListener('DOMContentLoaded', initApp);
+
+const getPost = async (id) => {
+  return await (await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)).json();
+}
+
