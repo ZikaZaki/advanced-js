@@ -31,6 +31,8 @@ const getPostsSerialized = async (ids) => {
 }
 
 // Using Promise.all is faster, even though you may not get the data in order.
+// When using Promise.all, if one of the promises falis they all fail. 
+// So if you want to check the status allowing some to fail and some not and still get something back, use Promise.allSettled
 const getPostsConcurrently = async (ids) => {
   const posts = await Promise.all(ids.map(async (id) => getPost(id)));
   console.log(posts);
