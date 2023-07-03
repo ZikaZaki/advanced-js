@@ -30,6 +30,18 @@ const getPostsSerialized = async (ids) => {
   console.log("I'll wait on you");
 }
 
+// Get posts with Higher Order Function (reduce cause it returns a value).
+const getPostsWithReduce = async (ids) => {
+  await ids.reduce(async (acc, id) => {
+    // Waits for the previous item to complete (Resolve).
+    await acc;
+    // get the next item
+    const post = await getPost(id);
+    console.log(post);
+  }, Promise.resolve());
+  console.log("I'll wait on you");
+}
+
 // Using Promise.all is faster, even though you may not get the data in order.
 // When using Promise.all, if one of the promises falis they all fail. 
 // So if you want to check the status allowing some to fail and some not and still get something back, use Promise.allSettled
