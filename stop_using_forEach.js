@@ -13,6 +13,16 @@ const getPost = async (id) => {
   return await (await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)).json();
 }
 
+// Do not use forEach with async await, cause this will not get the data in the requested order.
+// Also, you cannot return anything in the forEach method.
+const useForEach = async (ids) => {
+  await ids.forEach(async (id) => {
+    const data = await getPost(id);
+    console.log(data);
+  });
+  console.log("I'm not waiting");
+}
+
 const getPostsSerialized = async (ids) => {
   for (const id of ids) {
     const data = await getPost(id);
