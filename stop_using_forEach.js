@@ -39,6 +39,8 @@ const getPostsWithReduce = async (ids) => {
     // get the next item
     const post = await getPost(id);
     console.log(post);
+    // Not passing the Promise.resolve(), will return all the items skipping the first one which is the initial value.
+    // Therefore, to ensure the inital value is also returned, you must pass Promist.resolve().
   }, Promise.resolve());
   console.log("I'll wait on you");
 }
