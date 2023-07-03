@@ -20,3 +20,8 @@ const getPostsSerialized = async (ids) => {
   console.log("I'll wait on you");
 }
 
+const getPostsConcurrently = async (ids) => {
+  const posts = await Promise.all(ids.map(async (id) => getPost(id)));
+  console.log(posts);
+  console.log("I'll wait on you");
+}
