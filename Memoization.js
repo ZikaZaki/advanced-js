@@ -23,3 +23,5 @@ const initApp = async () => {
   console.log(memoizedAddFib(6));
   console.log(memoizedAddFib(6));
 }
+
+document.addEventListener('DOMContentLoaded', initApp);
