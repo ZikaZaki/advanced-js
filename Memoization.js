@@ -36,21 +36,6 @@ const addMany = (...args) => {
   return args.reduce((acc, num) => acc + num);
 }
 
-// const memoizedMultiplyBy10 = () => {
-//   const cache = {};
-  
-//   return (num) => {
-//     if(num in cache) {
-//       console.log(cache);
-//       return cache[num];
-//     }
-    
-//     const result = num * 10;
-//     cache[num] = result;
-//     return result;
-//   }
-// }
-
 const fib = (pos) => {
   if (pos < 2) return pos;
   return fib(pos - 1) + fib(pos - 2);
