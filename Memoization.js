@@ -35,3 +35,7 @@ const add3 = (num1, num2, num3) => {
 }
 
 
+const addMany = (...args) => {
+  return args.reduce((acc, num) => acc + num);
+}
+
