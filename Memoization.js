@@ -54,3 +54,8 @@ const addMany = (...args) => {
 //   }
 // }
 
+const fib = (pos) => {
+  if (pos < 2) return pos;
+  return fib(pos - 1) + fib(pos - 2);
+}
+
