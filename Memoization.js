@@ -26,14 +26,11 @@ const initApp = async () => {
 
 document.addEventListener('DOMContentLoaded', initApp);
 
-
 const multiplyBy10 = (num) => num * 10;
-
 
 const add3 = (num1, num2, num3) => {
   return num1 + num2 + num3;
 }
-
 
 const addMany = (...args) => {
   return args.reduce((acc, num) => acc + num);
@@ -58,7 +55,6 @@ const fib = (pos) => {
   if (pos < 2) return pos;
   return fib(pos - 1) + fib(pos - 2);
 }
-
 // Apply Memoizatio with "decorator" without creating another function, which will memoize any other function passed to it.
 // decorator function
 const memoize = (fn) => {
@@ -76,3 +72,4 @@ const memoize = (fn) => {
     return result;
   }
 }
+
