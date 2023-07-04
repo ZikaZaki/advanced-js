@@ -25,3 +25,7 @@ const initApp = async () => {
 }
 
 document.addEventListener('DOMContentLoaded', initApp);
+
+
+const multiplyBy10 = (num) => num * 10;
+
