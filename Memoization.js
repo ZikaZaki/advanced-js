@@ -1,4 +1,3 @@
-
 const initApp = async () => {
 //   const memoizedMultBy10 = memoize(multiplyBy10);
 //   console.log(memoizedMultBy10(10));
