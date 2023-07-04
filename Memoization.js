@@ -29,3 +29,9 @@ document.addEventListener('DOMContentLoaded', initApp);
 
 const multiplyBy10 = (num) => num * 10;
 
+
+const add3 = (num1, num2, num3) => {
+  return num1 + num2 + num3;
+}
+
+
