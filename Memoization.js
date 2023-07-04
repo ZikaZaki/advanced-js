@@ -1,3 +1,13 @@
+/*
+* Memoization is a programming concept or technique used to optimized the performance of a function that is called frequently with the same inputs. The technique involves caching the results of the function calls in memory so that subsequent calls with the same inputs can be returned directly from the cache instead of recomputing the result.
+* Memoization is typically applied to:
+* >>> Intesive Processing.
+* >>> Recursive Functions
+* >>> API Requests (not ideal)
+**********************BEST PRACTICES**********************
+* As a best practice Memoization should only be added to "Pure Functions", that is given the same inputs and always giving the same output.
+* NOTE: Memoization also comes at a cost, you're trading "Memory" for "Speed".
+*/
 const initApp = async () => {
 //   const memoizedMultBy10 = memoize(multiplyBy10);
 //   console.log(memoizedMultBy10(10));
