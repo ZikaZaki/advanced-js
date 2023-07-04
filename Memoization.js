@@ -59,3 +59,20 @@ const fib = (pos) => {
   return fib(pos - 1) + fib(pos - 2);
 }
 
+// Apply Memoizatio with "decorator" without creating another function, which will memoize any other function passed to it.
+// decorator function
+const memoize = (fn) => {
+  const cache = {};
+  
+  // By returning an anonymous function, we're crating a closure.
+  return (...args) => {
+    if (args.toString() in cache) {
+      console.log(cache);
+      return cache[args.toString()];
+    }
+    
+    const result = fn(...args);
+    cache[args.toString()] = result;
+    return result;
+  }
+}
