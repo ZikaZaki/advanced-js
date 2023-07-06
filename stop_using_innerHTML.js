@@ -1,4 +1,3 @@
-
 const initApp = async () => {
   const button1 = document.getElementById('1');
   button1.addEventListener('click', createParas1);
@@ -8,7 +7,6 @@ const initApp = async () => {
 }
 
 document.addEventListener("DOMContentLoaded", initApp);
-
 
 const createParas1 = () => {
   const start = Date.now();
@@ -24,7 +22,6 @@ const createParas1 = () => {
   const duration = Date.now() - start;
   console.log(`InnerHTML Duration: ${duration}`);
 }
-
 
 const createParas2 = () => {
   const start = Date.now();
