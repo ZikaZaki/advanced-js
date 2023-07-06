@@ -1,4 +1,4 @@
-/*
+/* =================================SECOND REASON=================================
 * The use of innerHTML has a security issues which is demonstrated in this example.
 * If a user sumbits this text (<img src='x' onerror='alert("XSS Attack!")'>), it will result in a XSS security issue.
 */
