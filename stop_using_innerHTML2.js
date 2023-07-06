@@ -6,3 +6,5 @@ const initApp = async () => {
     processUserInput();
   });
 }
+
+document.addEventListener('DOMContentLoaded', initApp);
