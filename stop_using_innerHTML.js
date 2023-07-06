@@ -24,3 +24,22 @@ const createParas1 = () => {
   const duration = Date.now() - start;
   console.log(`InnerHTML Duration: ${duration}`);
 }
+
+
+const createParas2 = () => {
+  const start = Date.now();
+  
+  const main = document.querySelector('main');
+  const fragment = document.createDocumentFragment();
+  let i = 0;
+  while(i < 1000) {
+    const p = document.createElement('p');
+    p.textContent = `My Value is ${i}`;
+    fragment.append(p);
+    i++;
+  }
+  main.append(fragment);
+  
+  const duration = Date.now() - start;
+  console.log(`Fragment Duration: ${duration}`);
+}
