@@ -8,3 +8,19 @@ const initApp = async () => {
 }
 
 document.addEventListener("DOMContentLoaded", initApp);
+
+
+const createParas1 = () => {
+  const start = Date.now();
+  
+  const main = document.querySelector('main');
+  
+  let i = 0;
+  while(i < 500) {
+    main.innerHTML += `<p>My Value is ${i}</p>`;
+    i++;
+  }
+  
+  const duration = Date.now() - start;
+  console.log(`InnerHTML Duration: ${duration}`);
+}
