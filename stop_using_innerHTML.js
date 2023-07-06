@@ -6,3 +6,5 @@ const initApp = async () => {
   const button2 = document.getElementById('2');
   button2.addEventListener('click', createParas2);
 }
+
+document.addEventListener("DOMContentLoaded", initApp);
