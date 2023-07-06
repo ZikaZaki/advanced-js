@@ -4,7 +4,7 @@
 * >>> Intesive Processing.
 * >>> Recursive Functions
 * >>> API Requests (not ideal)
-**********************BEST PRACTICES**********************
+************************************************BEST PRACTICES************************************************
 * As a best practice Memoization should only be added to "Pure Functions", that is given the same inputs and always giving the same output.
 * NOTE: Memoization also comes at a cost, you're trading "Memory" for "Speed".
 */
