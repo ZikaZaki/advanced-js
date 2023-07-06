@@ -17,3 +17,14 @@ const processUserInput = () => {
   const h1 = document.querySelector('h1');
   h1.innerHTML = rawData;
 }
+
+/* 
+* In order to fix the issue demonstrated above, we need to "sanitize" any data, especially "text", before processing it.
+* Here's a helper function to sanitize any raw data.
+*/
+const sanitizeInput = (inputValue) => {
+  const div = document.createElement('div');
+  // Attention!! we used textContent and NOT innerHTML.
+  div.textContent = inputValue;
+  return div.innerHTML;
+}
