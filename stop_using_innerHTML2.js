@@ -13,9 +13,15 @@ const initApp = async () => {
 document.addEventListener('DOMContentLoaded', initApp);
 
 const processUserInput = () => {
+  // const rawData = document.querySelector('input').value;
+  // const h1 = document.querySelector('h1');
+  // h1.innerHTML = rawData;
+
+  // To fix security issue
   const rawData = document.querySelector('input').value;
+  const sanitizedData = sanitizeInput(rawData);
   const h1 = document.querySelector('h1');
-  h1.innerHTML = rawData;
+  h1.innerHTML = sanitizedData;
 }
 
 /* 
