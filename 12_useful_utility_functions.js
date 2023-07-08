@@ -39,3 +39,12 @@ const sanitizeInput = (inputValue) => {
 // const dirtyInput = "<script>alert('XSS Attack!')</script>&othervalues";
 // const cleanInput = sanitizeInput(dirtyInput);
 // log(cleanInput);
+
+// #7 sanitizeInput: Using Regex to sanitize input by removing any html tags or special characters.
+function sanitizeInput(input) {
+  // Remove HTML tags
+  let sanitizedInput = input.replace(/<[^>]*>/g, '');
+  // Remove special characters
+  sanitizedInput = sanitizedInput.replace(/[^\w\s]/gi, '');
+  return sanitizedInput;
+}
