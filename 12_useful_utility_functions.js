@@ -69,3 +69,11 @@ const deleteChildElements = (parentElement) => {
 };
 
 deleteChildElements(body);
+
+
+// #10 addClass: Add CSS class with optional query scope
+const addClass = (selector, className, scope) => {
+  (scope || document).querySelector(selector).classList.add(className);
+};
+
+addClass("body", "purple");
