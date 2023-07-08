@@ -1,4 +1,3 @@
-
 // #1 properCase: Capitalize the first letter of a string.
 const properCase = (string) => {
   return `${string[0].toUpperCase()}${string.slice(1).toLowerCase()}`;
@@ -70,14 +69,12 @@ const deleteChildElements = (parentElement) => {
 
 deleteChildElements(body);
 
-
 // #10 addClass: Add CSS class with optional query scope
 const addClass = (selector, className, scope) => {
   (scope || document).querySelector(selector).classList.add(className);
 };
 
 addClass("body", "purple");
-
 
 // #11 isIOS: Check for iOS platform.
 /** NOTE: Check MDN for navigators */
@@ -103,5 +100,4 @@ const getParameterValue = (paramName, url) => {
 
 const PARAM_TO_EXTRACT = 'paramTwo';
 const URL = 'https://www.testURL.com/?paramOne=one&paramTwo=Zack+Ali';
-
 console.log(getParameterValue(PARAM_TO_EXTRACT, URL));
