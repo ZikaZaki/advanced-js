@@ -89,3 +89,19 @@ const isIOS = () => {
 };
 
 log(isIOS());
+
+// #12 getParameterValue: Get parameters by name from url
+const getParameterValue = (paramName, url) => {
+  if (!url) url = window.location.href;
+  const regex = new RegExp(`[?&]${paramName}(=([^&#]*))`);
+  const results = regex.exec(url);
+  // console.log(results);
+  if (!results) return null;
+  if (!results[2]) return "";
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
+};
+
+const PARAM_TO_EXTRACT = 'paramTwo';
+const URL = 'https://www.testURL.com/?paramOne=one&paramTwo=Zack+Ali';
+
+console.log(getParameterValue(PARAM_TO_EXTRACT, URL));
