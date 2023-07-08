@@ -48,3 +48,13 @@ function sanitizeInput(input) {
   sanitizedInput = sanitizedInput.replace(/[^\w\s]/gi, '');
   return sanitizedInput;
 }
+
+// #8 createElement: Create an element with an optional CSS class.
+const createElement = (tag, className) => {
+  const el = document.createElement(tag);
+  if (className) el.classList.add(className);
+  return el;
+};
+
+const root = createElement("main", "root");
+body.appendChild(root);
