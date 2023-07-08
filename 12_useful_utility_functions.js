@@ -58,3 +58,14 @@ const createElement = (tag, className) => {
 
 const root = createElement("main", "root");
 body.appendChild(root);
+
+// #9 deleteChildElements: Delete all contents.
+const deleteChildElements = (parentElement) => {
+  let child = parentElement.lastElementChild;
+  while (child) {
+    parentElement.removeChild(child);
+    child = parentElement.lastElementChild;
+  }
+};
+
+deleteChildElements(body);
