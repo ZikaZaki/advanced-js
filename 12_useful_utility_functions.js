@@ -10,3 +10,6 @@ const log = (content) => {
 };
 
 log(properCase("rEsEArcH"));
+
+// #3 eventLog: Console log the event target.
+const eventLog = (e) => console.log(e.target);
