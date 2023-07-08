@@ -28,3 +28,14 @@ const listen = (target, event, callback, capture = false) => {
 };
 
 // listen(body, "click", eventLog);
+
+// #6 sanitizeInput: Sanitize input to text, escaping the html tags and special characters. use Regex or try this...
+const sanitizeInput = (inputValue) => {
+  const div = document.createElement('div');
+  div.textContent = inputValue;
+  return div.innerHTML;
+};
+
+// const dirtyInput = "<script>alert('XSS Attack!')</script>&othervalues";
+// const cleanInput = sanitizeInput(dirtyInput);
+// log(cleanInput);
