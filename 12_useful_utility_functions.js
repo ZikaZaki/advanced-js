@@ -21,3 +21,10 @@ const select = (selector, scope) => {
 
 // const body = select('body');
 // log(body);
+// #5 listen: An addEventListener wrapper.
+/**NOTE: !! is a double negation operator. It's used to convert a value to its boolean equivalent. This means that if the value is truthy (i.e. not false, 0, null, undefined, NaN, or an empty string), then the "!" operator will return false; otherwise, it will return true. */
+const listen = (target, event, callback, capture = false) => {
+  target.addEventListener(event, callback, !!capture);
+};
+
+// listen(body, "click", eventLog);
