@@ -1,8 +1,8 @@
-/* =================================FIRST REASON=================================
+/**********************************************FIRST REASON/**********************************************
 * The use of innerHTML results in a very SLOW performance and that becuase, it has 
 to parse the input text everytime there's a change, and this process is time-consuming.
 Therefore, use FRAGMENT instead, which is much more faster.
-*/
+*********************************************************************************************************/
 const initApp = async () => {
   const button1 = document.getElementById('1');
   button1.addEventListener('click', createParas1);
