@@ -77,3 +77,15 @@ const addClass = (selector, className, scope) => {
 };
 
 addClass("body", "purple");
+
+
+// #11 isIOS: Check for iOS platform.
+/** NOTE: Check MDN for navigators */
+const isIOS = () => {
+  return (
+    (/iPad|iPhone|iPod/.test(navigator.platform) ||
+      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)) && !window.MSStream // MSStream is to avoid IE11
+  );
+};
+
+log(isIOS());
