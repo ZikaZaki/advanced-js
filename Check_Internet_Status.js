@@ -1,3 +1,4 @@
+/** ****************Online/Offline Detection************* */
 // The solution with navigator.online
 // Simple but has a problem...
 window.addEventListener("load", (event) => {
