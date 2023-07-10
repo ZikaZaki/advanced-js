@@ -10,3 +10,8 @@ window.addEventListener("offline", (event) => {
   const statusDisplay = document.getElementById("status");
   statusDisplay.textContent = "Offline";
 });
+
+window.addEventListener("online", (event) => {
+  const statusDisplay = document.getElementById("status");
+  statusDisplay.textContent = "Online";
+});
