@@ -26,3 +26,13 @@ const checkOnlineStatus = async () => {
     return false; // definitely offline
   }
 }
+
+
+setInterval(async () => {
+  const result = await checkOnlineStatus();
+  // const statusDisplay = document.getElementById("status");
+  // statusDisplay.textContent = result ? "Online" : "Offline";
+
+  if (result) { console.log("Online"); }
+  else { console.log("Offline"); }
+}, 3000);
