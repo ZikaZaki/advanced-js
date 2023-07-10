@@ -1,4 +1,3 @@
-
 // The solution with navigator.online
 // Simple but has a problem...
 window.addEventListener("load", (event) => {
@@ -26,7 +25,6 @@ const checkOnlineStatus = async () => {
     return false; // definitely offline
   }
 }
-
 
 setInterval(async () => {
   const result = await checkOnlineStatus();
