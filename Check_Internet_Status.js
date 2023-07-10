@@ -5,3 +5,8 @@ window.addEventListener("load", (event) => {
   const statusDisplay = document.getElementById("status");
   statusDisplay.textContent = navigator.online ? "Online" : "Offline";
 });
+
+window.addEventListener("offline", (event) => {
+  const statusDisplay = document.getElementById("status");
+  statusDisplay.textContent = "Offline";
+});
