@@ -61,3 +61,17 @@ const findMostCommonString = (array) => {
 // console.log(findMostCommonString(arrayOfString));
 // downside to this solution: it modifies original array
 // downside to this solution: it does not allow for ties, which means that it will only return the last common string.
+
+// Solution 2:
+const findMostCommonStringNoMod = (array) => {
+  if (!array.length) return;
+  const newArray = [...array];
+  return newArray.sort((a, b) => 
+      newArray.filter(str => str === a).length
+      - newArray.filter(str => str === b).length
+  ).pop();
+}
+
+console.log(findMostCommonStringNoMod(arrayOfString));
+console.log(arrayOfString);
+// downside to this solution: it does not allow for ties, which means that it will only return the last common string.
