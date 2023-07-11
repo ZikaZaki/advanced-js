@@ -27,3 +27,21 @@ const numberSortDesc = (array) => {
 }
 
 console.log(numberSortDesc(arrayOfNumbers));
+
+/*======== Solution 3: Sort an array of numbers AND strings ========*/
+const arrayNumAndString = [1, 10000, 21, 30, 4, "zika", "abc", "medium"];
+
+const sortNumbersAndStrings = (array) => {
+  if (!array.length) return;
+  const numArray = [];
+  const strArray = [];
+  array.forEach(el => {
+    isNaN(el) ? strArray.push(el) : numArray.push(el);
+  });
+  strArray.sort();
+  numArray.sort((a, b) => a - b);
+
+  return [...numArray, ...strArray];
+}
+
+console.log(sortNumbersAndStrings(arrayNumAndString));
