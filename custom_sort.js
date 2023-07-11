@@ -75,3 +75,38 @@ const findMostCommonStringNoMod = (array) => {
 console.log(findMostCommonStringNoMod(arrayOfString));
 console.log(arrayOfString);
 // downside to this solution: it does not allow for ties, which means that it will only return the last common string.
+
+// Solution 3:
+const mostCommonWithTies = (array) => {
+  if (!array.length) return;
+  const countObj = {};
+
+  array.forEach(el => {
+    countObj[el] ? countObj[el] += 1 : countObj[el] = 1;
+  });
+
+  // console.log(countObj);
+  const sortArray = [];
+  Object.keys(countObj).forEach(key => {
+    sortArray.push([key, countObj[key]]);
+  });
+
+  sortArray.sort((a, b) => a[1] - b[1]);
+  // console.log(sortArray);
+
+  const highestCount = sortArray[sortArray.length - 1][1];
+
+  // Solution 3a: return original element and count
+  // const resultArray = sortArray.filter(arr => arr[1] === highestCount);
+
+  // Solution 3b: only returns the original element
+  const resultArray = [];
+  sortArray.forEach(arr => {
+    if (arr[1] === highestCount) resultArray.push(arr[0]);
+  });
+
+  return resultArray;
+}
+
+console.log(mostCommonWithTies(arrayOfString));
+// downside to this solution: object keys are converted to strings. This solution converts all array data to string type.
