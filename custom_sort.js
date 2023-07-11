@@ -19,3 +19,11 @@ const numberSortAsc = (array) => {
 }
 
 console.log(numberSortAsc(arrayOfNumbers));
+/*======== Solution 2: Sort numbers in descending order ========*/
+// const arrayOfNumbers = [1, 10000, 21, 30, 4];
+const numberSortDesc = (array) => {
+  if (!array.length) return;
+  return array.sort((a, b) => a - b).reverse();
+}
+
+console.log(numberSortDesc(arrayOfNumbers));
