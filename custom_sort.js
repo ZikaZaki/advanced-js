@@ -131,3 +131,15 @@ const countAllWords = (string) => {
 }
 
 console.log(countAllWords(wordString));
+
+/*======== Challenge 2: Return most common word in a string ========*/
+// Solution:
+const mostCommonWord = (string) => {
+  if (!string.length) return;
+
+  const wordArray = string.toLowerCase().replace(/([.!?,;:-])/g, "").replace(/[\s]{2,}/g, " ").split(" ");
+
+  return mostCommonWithTies(wordArray);
+}
+
+console.log(mostCommonWord(wordString));
