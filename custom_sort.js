@@ -110,3 +110,24 @@ const mostCommonWithTies = (array) => {
 
 console.log(mostCommonWithTies(arrayOfString));
 // downside to this solution: object keys are converted to strings. This solution converts all array data to string type.
+
+/*======== Challenge 2: Count all occurrences of every word in a string ========*/
+const wordString = "Every good boy; does fine. Every good boy does fine. Every good boy does? fine. Every! good, boy does fine. Every good boy does.";
+
+// Solution
+const countAllWords = (string) => {
+  if (!string.length) return;
+
+  const wordArray = string.toLowerCase().replace(/([.!?,;:-])/g, "").replace(/[\s]{2,}/g, " ").split(" ");
+
+  // console.log(wordArray);
+  
+  const countObj = {};
+  wordArray.forEach(word => {
+    countObj[word] ? countObj[word] += 1 : countObj[word] = 1;
+  });
+
+  return countObj;
+}
+
+console.log(countAllWords(wordString));
