@@ -45,3 +45,19 @@ const sortNumbersAndStrings = (array) => {
 }
 
 console.log(sortNumbersAndStrings(arrayNumAndString));
+
+/*======== Challenge 1: Define a function that takes an array of strings, and returns the most commonly occurring string ========*/
+const arrayOfString = ["one", "two", "3", "one", "one", "two", "one", "one", 5, 5, 5, 5, 5, "two"];
+
+// Solution 1:
+const findMostCommonString = (array) => {
+  if (!array.length) return;
+  return array.sort((a, b) => 
+      array.filter(str => str === a).length
+      - array.filter(str => str === b).length
+  ).pop();
+}
+
+// console.log(findMostCommonString(arrayOfString));
+// downside to this solution: it modifies original array
+// downside to this solution: it does not allow for ties, which means that it will only return the last common string.
