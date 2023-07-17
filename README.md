@@ -1,5 +1,4 @@
 # Advanced-JS
-
 This documentation is based on John Resig's website on Advanced JavaScript. If these concepts seem complex to you, i recommend [these resources](https://github.com/micromata/awesome-javascript-learning) and also strongly recommend [FreeCodeCamp - Learn to code and help nonprofits](https://www.freecodecamp.org). If you feel you know most of these concepts, you could just try out the [quizzes](#quizzes) and you're good to go.
 
 ## Contents
