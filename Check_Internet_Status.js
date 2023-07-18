@@ -15,6 +15,7 @@ window.addEventListener("online", (event) => {
   const statusDisplay = document.getElementById("status");
   statusDisplay.textContent = "Online";
 });
+
 /** **************************SOLUTION******************************* 
 * Correct way: Request a small image at an interval to determine status
 */
