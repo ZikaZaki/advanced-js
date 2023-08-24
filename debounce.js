@@ -1,5 +1,6 @@
 /*
 Is There A Certain Scenarios Where I Need To Choose Debouncing Over Throttling?
+
 Yes, there are certain scenarios where debouncing is more appropriate than throttling. Here are a few examples:
 
 1- Search Input: When implementing a search functionality, debouncing can be useful. As the user types in the search input, 
