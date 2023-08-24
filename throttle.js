@@ -2,6 +2,7 @@
 Is There A Certain Scenarios Where I Need To Choose Throttling Over Debouncing?
 
 Yes, there are certain scenarios where throttling is more appropriate than debouncing. Here are a few examples:
+
 1- Continuous Event Streaming: Throttling is useful when dealing with continuous event streams or rapidly changing data, 
 such as scroll events or mouse movement events. In such cases, you may want to limit the frequency of function invocations 
 to prevent overwhelming the system with a high volume of function calls. Throttling ensures that the function is called at regular intervals,
